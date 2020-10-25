@@ -6,9 +6,9 @@ from flask import Flask, request
 app = Flask(__name__)
 app.debug = True
 
-# @app.route('/')
-# def index():
-#     return '<h1>ghb</h1>'
+@app.route('/')
+def index():
+    return '<h1>На главной ничего нет</h1>'
 
 @app.route('/marusya', methods=['POST', 'GET'])
 def marusya():
