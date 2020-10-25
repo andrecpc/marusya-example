@@ -51,7 +51,7 @@ def main():
             "type": "ItemsList",
             # "title": "Две картинки",
             # "description": "текст",
-            "items": ["image_id": 457239018, "image_id": 457239017]
+            "items": [{"image_id": 457239018}, {"image_id": 457239017}, {"image_id": 457239019}]
                 }
     else:
         text = request.json['request']['command'].lower()
