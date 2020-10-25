@@ -10,7 +10,11 @@ app.debug = True
 # def index():
 #     return '<h1>ghb</h1>'
 
-@app.route('/privet', metods=['POST'])
+@app.route('/marusya', methods=['POST', 'GET'])
+def marusya():
+    return "Marusya"
+
+@app.route('/privet', methods=['POST'])
 def main():
     response = {
     'version': request.json['version'],
