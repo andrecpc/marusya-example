@@ -16,12 +16,24 @@ def marusya():
 
 @app.route('/privet', methods=['POST'])
 def main():
+
+    card = {}
+    buttons = {}
+
+    if request.json['session']['new']:
+        text = 'Это еще тестовый навык'
+
+
+
+
     response = {
     'version': request.json['version'],
     'session': request.json['session'],
     'response': {
         'end_session': False,
-        'text': "Ну привет!"
+        'text': text,
+        'card': card,
+        'buttons': buttons
         }
     }
 
