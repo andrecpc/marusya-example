@@ -49,9 +49,9 @@ def main():
         text = 'Карусель:'
         card = {
             "type": "ItemsList",
-            "title": "Две картинки",
-            "description": "текст",
-            "items": [{"image_id": 457239018}, {"image_id": 457239017}]
+            # "title": "Две картинки",
+            # "description": "текст",
+            "items": ["image_id": 457239018, "image_id": 457239017]
                 }
     else:
         text = request.json['request']['command'].lower()
