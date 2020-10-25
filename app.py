@@ -23,19 +23,21 @@ def main():
     text = ''
 
     if request.json['session']['new']:
-        text = 'Это еще тестовый навык'
+        text = 'Привет! Это еще тестовый навык.'
     elif request.json['request']['command'].lower() == 'привет':
         text = 'Привет!!!'
     elif request.json['request']['command'].lower() == 'хватит':
         text = 'Хорошо, до встречи!'
         end_session = True
+    elif request.json['request']['command'] == 'on_interrupt':
+        text = 'Приходи еще.'
     elif request.json['request']['command'].lower() == 'картинка':
         text = 'Вот такая есть картинка:'
         card = {
             'type': 'BigImage',
             'image_id': 457239018,
             'title': 'Это Коржик — офисный пёс',
-            'description': ''
+            'description': 'текст'
                 }
     elif request.json['request']['command'].lower() == 'кнопки':
         text = 'Вот такие есть кнопки:'
@@ -48,7 +50,7 @@ def main():
         card = {
             "type": "ItemsList",
             "title": "Две картинки",
-            "description": "",
+            "description": "текст",
             "items": [{"image_id": 457239018}, {"image_id": 457239017}]
                 }
     else:
